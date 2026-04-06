@@ -1,0 +1,329 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "🐾 萌宠小店" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]: 🐾
+          - generic [ref=e10]: 萌宠小店
+        - button [ref=e11]:
+          - img [ref=e12]
+        - button "☀️" [ref=e14]:
+          - generic [ref=e15]: ☀️
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e20]: 👤
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: "111"
+            - paragraph [ref=e23]: 已登录
+        - button "退出登录" [ref=e24]
+      - navigation [ref=e25]:
+        - link "🏠 首页" [ref=e26] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e27]: 🏠
+          - generic [ref=e28]: 首页
+        - link "🛍️ 全部商品" [ref=e29] [cursor=pointer]:
+          - /url: /products
+          - generic [ref=e30]: 🛍️
+          - generic [ref=e31]: 全部商品
+        - link "💝 关于我们" [ref=e32] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e33]: 💝
+          - generic [ref=e34]: 关于我们
+        - paragraph [ref=e36]: 我的订单
+        - link "📋 全部订单 2" [ref=e37] [cursor=pointer]:
+          - /url: /orders
+          - generic [ref=e38]: 📋
+          - generic [ref=e39]: 全部订单
+          - generic [ref=e40]: "2"
+        - link "💰 待付款" [ref=e41] [cursor=pointer]:
+          - /url: /orders/pending
+          - generic [ref=e42]: 💰
+          - generic [ref=e43]: 待付款
+        - link "📦 待收货" [ref=e44] [cursor=pointer]:
+          - /url: /orders/shipped
+          - generic [ref=e45]: 📦
+          - generic [ref=e46]: 待收货
+        - link "🔄 退换/售后" [ref=e47] [cursor=pointer]:
+          - /url: /orders/returns
+          - generic [ref=e48]: 🔄
+          - generic [ref=e49]: 退换/售后
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: 📍 收货信息
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: 事ss
+          - paragraph [ref=e54]: "15122221212"
+          - paragraph [ref=e55]: ssss ssss
+      - link "🛒 购物车" [ref=e57] [cursor=pointer]:
+        - /url: /cart
+        - generic [ref=e58]: 🛒
+        - generic [ref=e59]: 购物车
+  - generic [ref=e60]:
+    - main [ref=e61]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic:
+            - generic: 🐱
+            - generic: 🐶
+            - generic: 🐾
+            - generic: 🦴
+          - generic [ref=e66]:
+            - heading "给毛孩子最好的 🐾" [level=1] [ref=e67]
+            - paragraph [ref=e68]:
+              - text: 精选全球优质宠物用品，从口粮到玩具，从清洁到保健
+              - text: 一站式满足您爱宠的所有需求
+            - generic [ref=e69]:
+              - link "🛍️ 开始选购" [ref=e70] [cursor=pointer]:
+                - /url: /products
+              - link "了解更多" [ref=e71] [cursor=pointer]:
+                - /url: /about
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: 1000+
+              - generic [ref=e75]: 精选商品
+            - generic [ref=e76]:
+              - generic [ref=e77]: 50万+
+              - generic [ref=e78]: 服务宠物
+            - generic [ref=e79]:
+              - generic [ref=e80]: 98%
+              - generic [ref=e81]: 好评率
+            - generic [ref=e82]:
+              - generic [ref=e83]: 24h
+              - generic [ref=e84]: 闪电发货
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - heading "🔥 热销推荐" [level=2] [ref=e87]
+            - paragraph [ref=e88]: 最受欢迎的宠物用品，万千铲屎官的共同选择
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - link "🐱 -24% 热销" [ref=e91] [cursor=pointer]:
+                - /url: /product/1
+                - generic [ref=e93]: 🐱
+                - generic [ref=e94]: "-24%"
+                - generic [ref=e96]: 热销
+              - generic [ref=e97]:
+                - link "皇家幼猫猫粮" [ref=e98] [cursor=pointer]:
+                  - /url: /product/1
+                  - heading "皇家幼猫猫粮" [level=3] [ref=e99]
+                - generic [ref=e100]:
+                  - generic [ref=e101]: ★
+                  - generic [ref=e102]: "4.8"
+                  - generic [ref=e103]: (1256)
+                - generic [ref=e104]:
+                  - generic [ref=e105]: ¥128
+                  - generic [ref=e106]: ¥168
+                - button "🛒 加入购物车" [ref=e107]
+            - generic [ref=e108]:
+              - link "🐶 -13% 进口" [ref=e109] [cursor=pointer]:
+                - /url: /product/2
+                - generic [ref=e111]: 🐶
+                - generic [ref=e112]: "-13%"
+                - generic [ref=e114]: 进口
+              - generic [ref=e115]:
+                - link "渴望六种鱼狗粮" [ref=e116] [cursor=pointer]:
+                  - /url: /product/2
+                  - heading "渴望六种鱼狗粮" [level=3] [ref=e117]
+                - generic [ref=e118]:
+                  - generic [ref=e119]: ★
+                  - generic [ref=e120]: "4.9"
+                  - generic [ref=e121]: (892)
+                - generic [ref=e122]:
+                  - generic [ref=e123]: ¥399
+                  - generic [ref=e124]: ¥459
+                - button "🛒 加入购物车" [ref=e125]
+            - generic [ref=e126]:
+              - link "🎾 -40% 5件套" [ref=e127] [cursor=pointer]:
+                - /url: /product/3
+                - generic [ref=e129]: 🎾
+                - generic [ref=e130]: "-40%"
+                - generic [ref=e132]: 5件套
+              - generic [ref=e133]:
+                - link "猫咪逗猫棒套装" [ref=e134] [cursor=pointer]:
+                  - /url: /product/3
+                  - heading "猫咪逗猫棒套装" [level=3] [ref=e135]
+                - generic [ref=e136]:
+                  - generic [ref=e137]: ★
+                  - generic [ref=e138]: "4.6"
+                  - generic [ref=e139]: (2342)
+                - generic [ref=e140]:
+                  - generic [ref=e141]: ¥29.9
+                  - generic [ref=e142]: ¥49.9
+                - button "🛒 加入购物车" [ref=e143]
+            - generic [ref=e144]:
+              - link "💧 -31% 超静音" [ref=e145] [cursor=pointer]:
+                - /url: /product/4
+                - generic [ref=e147]: 💧
+                - generic [ref=e148]: "-31%"
+                - generic [ref=e150]: 超静音
+              - generic [ref=e151]:
+                - link "猫咪自动饮水机" [ref=e152] [cursor=pointer]:
+                  - /url: /product/4
+                  - heading "猫咪自动饮水机" [level=3] [ref=e153]
+                - generic [ref=e154]:
+                  - generic [ref=e155]: ★
+                  - generic [ref=e156]: "4.7"
+                  - generic [ref=e157]: (679)
+                - generic [ref=e158]:
+                  - generic [ref=e159]: ¥89
+                  - generic [ref=e160]: ¥129
+                - button "🛒 加入购物车" [ref=e161]
+          - link "查看全部商品 →" [ref=e163] [cursor=pointer]:
+            - /url: /products
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - heading "🏷️ 商品分类" [level=2] [ref=e167]
+            - paragraph [ref=e168]: 按类别浏览，快速找到您需要的商品
+          - generic [ref=e169]:
+            - link "🐱 猫粮" [ref=e170] [cursor=pointer]:
+              - /url: /products?category=猫粮
+              - generic [ref=e171]: 🐱
+              - heading "猫粮" [level=3] [ref=e172]
+            - link "🐶 狗粮" [ref=e173] [cursor=pointer]:
+              - /url: /products?category=狗粮
+              - generic [ref=e174]: 🐶
+              - heading "狗粮" [level=3] [ref=e175]
+            - link "🎾 玩具" [ref=e176] [cursor=pointer]:
+              - /url: /products?category=玩具
+              - generic [ref=e177]: 🎾
+              - heading "玩具" [level=3] [ref=e178]
+            - link "🏠 用品" [ref=e179] [cursor=pointer]:
+              - /url: /products?category=用品
+              - generic [ref=e180]: 🏠
+              - heading "用品" [level=3] [ref=e181]
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - heading "✨ 新品上架" [level=2] [ref=e184]
+            - paragraph [ref=e185]: 精选好物，新鲜到货
+          - generic [ref=e186]:
+            - generic [ref=e187]:
+              - link "🦴 -33% 天然" [ref=e188] [cursor=pointer]:
+                - /url: /product/5
+                - generic [ref=e190]: 🦴
+                - generic [ref=e191]: "-33%"
+                - generic [ref=e193]: 天然
+              - generic [ref=e194]:
+                - link "狗狗磨牙骨头" [ref=e195] [cursor=pointer]:
+                  - /url: /product/5
+                  - heading "狗狗磨牙骨头" [level=3] [ref=e196]
+                - generic [ref=e197]:
+                  - generic [ref=e198]: ★
+                  - generic [ref=e199]: "4.5"
+                  - generic [ref=e200]: (1567)
+                - generic [ref=e201]:
+                  - generic [ref=e202]: ¥19.9
+                  - generic [ref=e203]: ¥29.9
+                - button "🛒 加入购物车" [ref=e204]
+            - generic [ref=e205]:
+              - link "🧹 -33% 可冲马桶" [ref=e206] [cursor=pointer]:
+                - /url: /product/6
+                - generic [ref=e208]: 🧹
+                - generic [ref=e209]: "-33%"
+                - generic [ref=e211]: 可冲马桶
+              - generic [ref=e212]:
+                - link "猫砂豆腐猫砂" [ref=e213] [cursor=pointer]:
+                  - /url: /product/6
+                  - heading "猫砂豆腐猫砂" [level=3] [ref=e214]
+                - generic [ref=e215]:
+                  - generic [ref=e216]: ★
+                  - generic [ref=e217]: "4.4"
+                  - generic [ref=e218]: (3421)
+                - generic [ref=e219]:
+                  - generic [ref=e220]: ¥39.9
+                  - generic [ref=e221]: ¥59.9
+                - button "🛒 加入购物车" [ref=e222]
+            - generic [ref=e223]:
+              - link "🍽️ -33% 智能" [ref=e224] [cursor=pointer]:
+                - /url: /product/7
+                - generic [ref=e226]: 🍽️
+                - generic [ref=e227]: "-33%"
+                - generic [ref=e229]: 智能
+              - generic [ref=e230]:
+                - link "宠物自动喂食器" [ref=e231] [cursor=pointer]:
+                  - /url: /product/7
+                  - heading "宠物自动喂食器" [level=3] [ref=e232]
+                - generic [ref=e233]:
+                  - generic [ref=e234]: ★
+                  - generic [ref=e235]: "4.6"
+                  - generic [ref=e236]: (445)
+                - generic [ref=e237]:
+                  - generic [ref=e238]: ¥199
+                  - generic [ref=e239]: ¥299
+                - button "🛒 加入购物车" [ref=e240]
+            - generic [ref=e241]:
+              - link "🐕 -34% 透气" [ref=e242] [cursor=pointer]:
+                - /url: /product/8
+                - generic [ref=e244]: 🐕
+                - generic [ref=e245]: "-34%"
+                - generic [ref=e247]: 透气
+              - generic [ref=e248]:
+                - link "狗狗牵引绳胸背带" [ref=e249] [cursor=pointer]:
+                  - /url: /product/8
+                  - heading "狗狗牵引绳胸背带" [level=3] [ref=e250]
+                - generic [ref=e251]:
+                  - generic [ref=e252]: ★
+                  - generic [ref=e253]: "4.7"
+                  - generic [ref=e254]: (987)
+                - generic [ref=e255]:
+                  - generic [ref=e256]: ¥59
+                  - generic [ref=e257]: ¥89
+                - button "🛒 加入购物车" [ref=e258]
+        - generic [ref=e260]:
+          - heading "💝 为什么选择我们" [level=2] [ref=e262]
+          - generic [ref=e263]:
+            - generic [ref=e264]:
+              - generic [ref=e265]: 🌍
+              - heading "全球精选" [level=3] [ref=e266]
+              - paragraph [ref=e267]: 严选全球优质宠物品牌，从源头把控品质，让您的爱宠享受最好的
+            - generic [ref=e268]:
+              - generic [ref=e269]: 🚚
+              - heading "闪电配送" [level=3] [ref=e270]
+              - paragraph [ref=e271]: 24小时内发货，全国主要城市次日达，让等待不再漫长
+            - generic [ref=e272]:
+              - generic [ref=e273]: 💯
+              - heading "品质保证" [level=3] [ref=e274]
+              - paragraph [ref=e275]: 7天无理由退换，正品保障，让您购物无忧
+    - contentinfo [ref=e276]:
+      - generic [ref=e277]:
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - generic [ref=e281]: 🐾
+              - generic [ref=e282]: 萌宠小店
+            - paragraph [ref=e283]:
+              - text: 用心呵护每一个小生命
+              - text: 为您的爱宠提供最优质的产品和服务
+          - generic [ref=e284]:
+            - heading "快速导航" [level=3] [ref=e285]
+            - list [ref=e286]:
+              - listitem [ref=e287]:
+                - link "首页" [ref=e288] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e289]:
+                - link "全部商品" [ref=e290] [cursor=pointer]:
+                  - /url: /products
+              - listitem [ref=e291]:
+                - link "关于我们" [ref=e292] [cursor=pointer]:
+                  - /url: /about
+          - generic [ref=e293]:
+            - heading "商品分类" [level=3] [ref=e294]
+            - list [ref=e295]:
+              - listitem [ref=e296]:
+                - link "猫粮专区" [ref=e297] [cursor=pointer]:
+                  - /url: /products?category=猫粮
+              - listitem [ref=e298]:
+                - link "狗粮专区" [ref=e299] [cursor=pointer]:
+                  - /url: /products?category=狗粮
+              - listitem [ref=e300]:
+                - link "宠物玩具" [ref=e301] [cursor=pointer]:
+                  - /url: /products?category=玩具
+              - listitem [ref=e302]:
+                - link "宠物用品" [ref=e303] [cursor=pointer]:
+                  - /url: /products?category=用品
+          - generic [ref=e304]:
+            - heading "联系我们" [level=3] [ref=e305]
+            - list [ref=e306]:
+              - listitem [ref=e307]: 📞 400-888-PETS
+              - listitem [ref=e308]: 📧 hello@petshop.com
+              - listitem [ref=e309]: 📍 上海市浦东新区萌宠路88号
+              - listitem [ref=e310]: 🕐 周一至周日 9:00-21:00
+        - paragraph [ref=e312]: © 2026 萌宠小店. All rights reserved. Made with ❤️ for pets.

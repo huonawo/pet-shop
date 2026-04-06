@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+/* Pet Shop Custom Theme */
+@theme {
+  --color-primary: #FF8C42;
+  --color-primary-light: #FFB07A;
+  --color-primary-dark: #E07030;
+  --color-secondary: #8B5CF6;
+  --color-secondary-light: #A78BFA;
+  --color-accent: #F472B6;
+  --color-accent-light: #FBCFE8;
+  --color-warm-bg: #FFF8F0;
+  --color-warm-bg-alt: #FFF1E6;
+  --color-text-dark: #4A3728;
+  --color-text-muted: #8B7355;
+  --color-text-light: #A89279;
+  --color-card-bg: #FFFFFF;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --font-family-pet: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+  --font-family-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark Theme - 优化对比度和可读性 */
+.dark {
+  --color-warm-bg: #0f1419;
+  --color-warm-bg-alt: #1a2332;
+  --color-text-dark: #f1f5f9;
+  --color-text-muted: #cbd5e1;
+  --color-text-light: #94a3b8;
+  --color-card-bg: #1e293b;
+  --color-primary: #FF8C42;
+  --color-primary-light: #FFB07A;
+  --color-secondary: #8B5CF6;
+  --color-accent: #F472B6;
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+}
+
+/* 增强深色模式下的卡片和容器 */
+.dark .bg-card-bg {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+.dark .bg-warm-bg-alt {
+  background-color: #1a2332;
+}
+
+.dark .bg-white {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+.dark .rounded-2xl,
+.dark .rounded-xl {
+  border: 1px solid #334155;
+}
+
+/* 优化深色模式文字对比度 */
+.dark .text-text-dark {
+  color: #f1f5f9;
+}
+
+.dark .text-text-muted {
+  color: #cbd5e1;
+}
+
+.dark .text-text-light {
+  color: #94a3b8;
+}
+
+/* 深色模式下的输入框优化 */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #1a2332;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+
+.dark input::placeholder {
+  color: #64748b;
+}
+
+/* 深色模式下的分隔线 */
+.dark .border-warm-bg-alt,
+.dark .border-warm-bg\/50 {
+  border-color: #334155;
+}
+
+.dark .border-t {
+  border-color: #334155;
+}
+
+/* 深色模式渐变背景优化 */
+.dark .bg-gradient-to-r {
+  background: linear-gradient(to right, #1e293b, #1e293b);
+}
+
+.dark .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #1e293b, #1e293b);
+}
+
+.dark .from-primary\/10,
+.dark .to-primary\/5 {
+  --color-primary: #FF8C42;
+}
+
+.dark .from-secondary\/10,
+.dark .to-secondary\/5 {
+  --color-secondary: #8B5CF6;
+}
+
+.dark .from-accent\/10,
+.dark .to-accent\/5 {
+  --color-accent: #F472B6;
+}
+
+/* 优化侧边栏深色模式 */
+.dark .bg-white\/80 {
+  background-color: rgba(30, 41, 59, 0.9);
+  border-color: #334155;
+}
+
+.dark .border-white\/30 {
+  border-color: #334155;
+}
+
+/* Footer 深色模式优化 */
+.dark footer.bg-text-dark {
+  background-color: #0f1419;
+  border-top: 1px solid #334155;
+}
+
+.dark footer .text-gray-400 {
+  color: #94a3b8;
+}
+
+.dark footer .text-gray-500 {
+  color: #64748b;
+}
+
+.dark footer .border-gray-700 {
+  border-color: #334155;
+}
+
+/* Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-warm-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Animation Utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
