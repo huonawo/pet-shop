@@ -16,35 +16,37 @@ const newProducts = computed(() => products.slice(4, 8))
     <HeroBanner />
 
     <!-- Featured Products -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-3">
-          🔥 热销推荐
-        </h2>
-        <p class="text-text-muted text-lg">
-          最受欢迎的宠物用品，万千铲屎官的共同选择
-        </p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <ProductCard
-          v-for="product in featuredProducts"
-          :key="product.id"
-          :product="product"
-          @require-login="showLoginModal = true"
-        />
-      </div>
-      <div class="text-center mt-10">
-        <router-link
-          to="/products"
-          class="inline-block px-10 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
-        >
-          查看全部商品 →
-        </router-link>
+    <section class="py-16 pr-24 sm:pr-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-3">
+            🔥 热销推荐
+          </h2>
+          <p class="text-text-muted text-lg">
+            最受欢迎的宠物用品，万千铲屎官的共同选择
+          </p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <ProductCard
+            v-for="product in featuredProducts"
+            :key="product.id"
+            :product="product"
+            @require-login="showLoginModal = true"
+          />
+        </div>
+        <div class="flex justify-center mt-10">
+          <router-link
+            to="/products"
+            class="block px-6 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+          >
+            查看全部商品 →
+          </router-link>
+        </div>
       </div>
     </section>
 
     <!-- Categories Section -->
-    <section class="bg-warm-bg-alt py-16">
+    <section class="bg-warm-bg-alt py-16 pr-24 sm:pr-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-3">
@@ -73,7 +75,7 @@ const newProducts = computed(() => products.slice(4, 8))
     </section>
 
     <!-- New Arrivals -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pr-24 sm:pr-32">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-3">
           ✨ 新品上架

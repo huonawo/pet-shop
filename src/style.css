@@ -21,8 +21,75 @@
   --font-family-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
+/* Theme-specific variables - CSS will be set by JS */
+:root {
+  --color-primary: #FF8C42;
+  --color-secondary: #8B5CF6;
+  --color-accent: #F472B6;
+}
+
+/* Warm Theme (暖阳) */
+[data-theme="warm"] {
+  --color-primary: #F59E0B;
+  --color-primary-light: #FBBF24;
+  --color-primary-dark: #D97706;
+  --color-secondary: #EF4444;
+  --color-accent: #EC4899;
+  --color-warm-bg: #FFFBEB;
+  --color-warm-bg-alt: #FEF3C7;
+  --color-text-dark: #78350F;
+  --color-text-muted: #92400E;
+  --color-text-light: #B45309;
+  --color-card-bg: #FFFCF0;
+}
+
+/* Ocean Theme (海洋) */
+[data-theme="ocean"] {
+  --color-primary: #06B6D4;
+  --color-primary-light: #22D3EE;
+  --color-primary-dark: #0891B2;
+  --color-secondary: #3B82F6;
+  --color-accent: #8B5CF6;
+  --color-warm-bg: #ECFEFF;
+  --color-warm-bg-alt: #CFFAFE;
+  --color-text-dark: #164E63;
+  --color-text-muted: #155E75;
+  --color-text-light: #0E7490;
+  --color-card-bg: #F0FDFA;
+}
+
+/* Forest Theme (森林) */
+[data-theme="forest"] {
+  --color-primary: #22C55E;
+  --color-primary-light: #4ADE80;
+  --color-primary-dark: #16A34A;
+  --color-secondary: #14B8A6;
+  --color-accent: #84CC16;
+  --color-warm-bg: #F0FDF4;
+  --color-warm-bg-alt: #DCFCE7;
+  --color-text-dark: #14532D;
+  --color-text-muted: #166534;
+  --color-text-light: #15803D;
+  --color-card-bg: #F0FDF4;
+}
+
+/* Pastel Theme (粉彩) */
+[data-theme="pastel"] {
+  --color-primary: #F472B6;
+  --color-primary-light: #F9A8D4;
+  --color-primary-dark: #E879F9;
+  --color-secondary: #A78BFA;
+  --color-accent: #FB923C;
+  --color-warm-bg: #FDF4FF;
+  --color-warm-bg-alt: #FAE8FF;
+  --color-text-dark: #581C87;
+  --color-text-muted: #7E22CE;
+  --color-text-light: #A855F7;
+  --color-card-bg: #FDF2F8;
+}
+
 /* Dark Theme - 优化对比度和可读性 */
-.dark {
+[data-theme="dark"] {
   --color-warm-bg: #0f1419;
   --color-warm-bg-alt: #1a2332;
   --color-text-dark: #f1f5f9;
@@ -38,110 +105,110 @@
 }
 
 /* 增强深色模式下的卡片和容器 */
-.dark .bg-card-bg {
+[data-theme="dark"] .bg-card-bg {
   background-color: #1e293b;
   border: 1px solid #334155;
 }
 
-.dark .bg-warm-bg-alt {
+[data-theme="dark"] .bg-warm-bg-alt {
   background-color: #1a2332;
 }
 
-.dark .bg-white {
+[data-theme="dark"] .bg-white {
   background-color: #1e293b;
   border: 1px solid #334155;
 }
 
-.dark .rounded-2xl,
-.dark .rounded-xl {
+[data-theme="dark"] .rounded-2xl,
+[data-theme="dark"] .rounded-xl {
   border: 1px solid #334155;
 }
 
 /* 优化深色模式文字对比度 */
-.dark .text-text-dark {
+[data-theme="dark"] .text-text-dark {
   color: #f1f5f9;
 }
 
-.dark .text-text-muted {
+[data-theme="dark"] .text-text-muted {
   color: #cbd5e1;
 }
 
-.dark .text-text-light {
+[data-theme="dark"] .text-text-light {
   color: #94a3b8;
 }
 
 /* 深色模式下的输入框优化 */
-.dark input,
-.dark select,
-.dark textarea {
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
   background-color: #1a2332;
   border-color: #334155;
   color: #f1f5f9;
 }
 
-.dark input::placeholder {
+[data-theme="dark"] input::placeholder {
   color: #64748b;
 }
 
 /* 深色模式下的分隔线 */
-.dark .border-warm-bg-alt,
-.dark .border-warm-bg\/50 {
+[data-theme="dark"] .border-warm-bg-alt,
+[data-theme="dark"] .border-warm-bg\/50 {
   border-color: #334155;
 }
 
-.dark .border-t {
+[data-theme="dark"] .border-t {
   border-color: #334155;
 }
 
 /* 深色模式渐变背景优化 */
-.dark .bg-gradient-to-r {
+[data-theme="dark"] .bg-gradient-to-r {
   background: linear-gradient(to right, #1e293b, #1e293b);
 }
 
-.dark .bg-gradient-to-br {
+[data-theme="dark"] .bg-gradient-to-br {
   background: linear-gradient(to bottom right, #1e293b, #1e293b);
 }
 
-.dark .from-primary\/10,
-.dark .to-primary\/5 {
+[data-theme="dark"] .from-primary\/10,
+[data-theme="dark"] .to-primary\/5 {
   --color-primary: #FF8C42;
 }
 
-.dark .from-secondary\/10,
-.dark .to-secondary\/5 {
+[data-theme="dark"] .from-secondary\/10,
+[data-theme="dark"] .to-secondary\/5 {
   --color-secondary: #8B5CF6;
 }
 
-.dark .from-accent\/10,
-.dark .to-accent\/5 {
+[data-theme="dark"] .from-accent\/10,
+[data-theme="dark"] .to-accent\/5 {
   --color-accent: #F472B6;
 }
 
 /* 优化侧边栏深色模式 */
-.dark .bg-white\/80 {
+[data-theme="dark"] .bg-white\/80 {
   background-color: rgba(30, 41, 59, 0.9);
   border-color: #334155;
 }
 
-.dark .border-white\/30 {
+[data-theme="dark"] .border-white\/30 {
   border-color: #334155;
 }
 
 /* Footer 深色模式优化 */
-.dark footer.bg-text-dark {
+[data-theme="dark"] footer.bg-text-dark {
   background-color: #0f1419;
   border-top: 1px solid #334155;
 }
 
-.dark footer .text-gray-400 {
+[data-theme="dark"] footer .text-gray-400 {
   color: #94a3b8;
 }
 
-.dark footer .text-gray-500 {
+[data-theme="dark"] footer .text-gray-500 {
   color: #64748b;
 }
 
-.dark footer .border-gray-700 {
+[data-theme="dark"] footer .border-gray-700 {
   border-color: #334155;
 }
 
@@ -162,7 +229,14 @@ body {
   background-color: var(--color-warm-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Theme transition for all color properties */
+*,
+*::before,
+*::after {
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease, fill 0.5s ease, stroke 0.5s ease;
 }
 
 /* Custom Scrollbar */

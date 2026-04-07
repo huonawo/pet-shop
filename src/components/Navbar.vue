@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCartStore } from '../stores/cart'
 import { useOrderStore } from '../stores/orders'
@@ -12,6 +13,8 @@ const orderStore = useOrderStore()
 const authStore = useAuthStore()
 const themeStore = useThemeStore()
 const route = useRoute()
+
+const showThemeMenu = ref(false)
 
 const navLinks = [
   { name: '首页', path: '/', icon: '🏠' },
@@ -33,6 +36,11 @@ function isActive(path) {
 
 function handleLogout() {
   authStore.logout()
+}
+
+function selectTheme(themeId) {
+  themeStore.setTheme(themeId)
+  showThemeMenu.value = false
 }
 </script>
 
@@ -77,14 +85,36 @@ function handleLogout() {
           </svg>
         </button>
 
-        <!-- Theme Toggle -->
-        <button
-          class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary hover:bg-primary/10 transition-all duration-200"
-          @click="themeStore.toggleTheme"
-        >
-          <span v-if="!collapsed" class="text-lg">{{ themeStore.isDark ? '☀️' : '🌙' }}</span>
-          <span v-else class="text-lg">{{ themeStore.isDark ? '☀️' : '🌙' }}</span>
-        </button>
+        <!-- Theme Toggle with Dropdown -->
+        <div class="relative">
+          <button
+            class="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary hover:bg-primary/10 transition-all duration-200"
+            @click="showThemeMenu = !showThemeMenu"
+          >
+            <span class="text-lg">{{ themeStore.currentTheme.colors.icon }}</span>
+          </button>
+          
+          <!-- Theme Dropdown Menu -->
+          <div
+            v-if="showThemeMenu"
+            class="absolute top-full right-0 mt-2 w-40 bg-card-bg rounded-xl shadow-xl border border-warm-bg-alt overflow-hidden z-50"
+          >
+            <button
+              v-for="theme in themeStore.themePresets"
+              :key="theme.id"
+              class="w-full px-3 py-2 flex items-center gap-2 hover:bg-warm-bg-alt transition-colors text-left"
+              :class="themeStore.currentTheme.id === theme.id ? 'bg-warm-bg-alt' : ''"
+              @click="selectTheme(theme.id)"
+            >
+              <span>{{ theme.icon }}</span>
+              <span class="text-sm text-text-dark">{{ theme.name }}</span>
+              <span
+                class="ml-auto w-3 h-3 rounded-full"
+                :style="{ backgroundColor: theme.primary }"
+              />
+            </button>
+          </div>
+        </div>
       </div>
 
       <!-- User Auth Section -->

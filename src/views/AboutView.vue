@@ -63,7 +63,7 @@
             <div class="w-20 h-20 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
               👨‍💼
             </div>
-            <h3 class="font-semibold text-text-dark">小明</h3>
+            <h3 class="font-semibold text-text-dark">小许</h3>
             <p class="text-text-muted text-sm">创始人 & CEO</p>
             <p class="text-text-light text-xs mt-1">资深猫奴，养了3只布偶</p>
           </div>
@@ -71,7 +71,7 @@
             <div class="w-20 h-20 bg-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
               👩‍⚕️
             </div>
-            <h3 class="font-semibold text-text-dark">小红</h3>
+            <h3 class="font-semibold text-text-dark">小李</h3>
             <p class="text-text-muted text-sm">首席宠物营养师</p>
             <p class="text-text-light text-xs mt-1">10年兽医经验</p>
           </div>
@@ -79,7 +79,7 @@
             <div class="w-20 h-20 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
               👨‍💻
             </div>
-            <h3 class="font-semibold text-text-dark">小刚</h3>
+            <h3 class="font-semibold text-text-dark">小许</h3>
             <p class="text-text-muted text-sm">技术总监</p>
             <p class="text-text-light text-xs mt-1">狗派程序员</p>
           </div>
@@ -87,7 +87,7 @@
             <div class="w-20 h-20 bg-success/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
               👩‍🎨
             </div>
-            <h3 class="font-semibold text-text-dark">小美</h3>
+            <h3 class="font-semibold text-text-dark">小方</h3>
             <p class="text-text-muted text-sm">设计主管</p>
             <p class="text-text-light text-xs mt-1">养了一只柯基</p>
           </div>
