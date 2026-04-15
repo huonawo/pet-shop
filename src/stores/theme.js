@@ -60,6 +60,10 @@ export const useThemeStore = defineStore('theme', () => {
     document.documentElement.style.setProperty('--color-primary', theme.primary)
     document.documentElement.style.setProperty('--color-secondary', theme.secondary)
     document.documentElement.style.setProperty('--color-accent', theme.accent)
+    document.documentElement.classList.add('theme-transition')
+    setTimeout(() => {
+      document.documentElement.classList.remove('theme-transition')
+    }, 300)
   }
 
   // Apply on init

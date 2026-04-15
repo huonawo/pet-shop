@@ -1,8 +1,30 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+
+function loadCart() {
+  try {
+    const stored = localStorage.getItem('pet-shop-cart')
+    if (stored) return JSON.parse(stored)
+  } catch (e) {
+    // ignore
+  }
+  return []
+}
+
+function saveCart(items) {
+  try {
+    localStorage.setItem('pet-shop-cart', JSON.stringify(items))
+  } catch (e) {
+    // ignore
+  }
+}
 
 export const useCartStore = defineStore('cart', () => {
-  const items = ref([])
+  const items = ref(loadCart())
+
+  watch(items, (newItems) => {
+    saveCart(newItems)
+  }, { deep: true })
 
   const totalItems = computed(() => {
     return items.value.reduce((sum, item) => sum + item.quantity, 0)

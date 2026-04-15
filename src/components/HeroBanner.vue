@@ -11,12 +11,12 @@
       <span class="absolute top-16 right-1/3 text-4xl opacity-15 animate-float" style="animation-delay: 1.5s;">🦴</span>
     </div>
 
-    <div class="flex justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col items-center text-center max-w-3xl">
-        <h1 class="text-4xl md:text-6xl font-bold text-text-dark font-pet mb-6 animate-fade-in-up">
+    <div class="flex justify-center items-center max-w-[2560px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
+      <div class="flex flex-col items-center text-center max-w-4xl">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-text-dark font-pet mb-6 animate-fade-in-up">
           给毛孩子最好的 <span class="text-primary">🐾</span>
         </h1>
-        <p class="text-lg md:text-xl text-text-muted mb-8 leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+        <p class="text-lg md:text-xl lg:text-2xl text-text-muted mb-8 leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
           精选全球优质宠物用品，从口粮到玩具，从清洁到保健<br>
           一站式满足您爱宠的所有需求
         </p>
@@ -38,22 +38,22 @@
     </div>
 
     <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-in-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="animation-delay: 0.6s;">
-        <div class="text-center bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-3xl md:text-4xl font-bold text-primary font-pet">1000+</div>
-          <div class="text-text-muted text-sm mt-1">精选商品</div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-in-up max-w-[2400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16" style="animation-delay: 0.6s;">
+        <div class="text-center bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-pet">1000+</div>
+          <div class="text-text-muted text-sm md:text-base mt-1">精选商品</div>
         </div>
-        <div class="text-center bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-3xl md:text-4xl font-bold text-secondary font-pet">50万+</div>
-          <div class="text-text-muted text-sm mt-1">服务宠物</div>
+        <div class="text-center bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary font-pet">50 万+</div>
+          <div class="text-text-muted text-sm md:text-base mt-1">服务宠物</div>
         </div>
-        <div class="text-center bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-3xl md:text-4xl font-bold text-accent font-pet">98%</div>
-          <div class="text-text-muted text-sm mt-1">好评率</div>
+        <div class="text-center bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-accent font-pet">98%</div>
+          <div class="text-text-muted text-sm md:text-base mt-1">好评率</div>
         </div>
-        <div class="text-center bg-white rounded-2xl p-6 shadow-sm">
-          <div class="text-3xl md:text-4xl font-bold text-success font-pet">24h</div>
-          <div class="text-text-muted text-sm mt-1">闪电发货</div>
+        <div class="text-center bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-bold text-success font-pet">24h</div>
+          <div class="text-text-muted text-sm md:text-base mt-1">闪电发货</div>
         </div>
     </div>
   </section>

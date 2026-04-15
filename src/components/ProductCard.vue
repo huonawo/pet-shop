@@ -49,7 +49,7 @@ function handleAddToCart() {
         class="w-full aspect-square flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
         :class="product.bgColor || 'bg-warm-bg-alt'"
       >
-        <span class="text-7xl md:text-8xl select-none">{{ product.emoji || '🐾' }}</span>
+        <span class="text-8xl md:text-9xl xl:text-[12rem] select-none">{{ product.emoji || '🐾' }}</span>
       </div>
       <!-- Discount Badge -->
       <div
@@ -71,31 +71,31 @@ function handleAddToCart() {
     </router-link>
 
     <!-- Product Info -->
-    <div class="p-4">
+    <div class="p-5 xl:p-6">
       <router-link :to="`/product/${product.id}`">
-        <h3 class="font-semibold text-text-dark text-base mb-1 line-clamp-1 group-hover:text-primary transition-colors">
+        <h3 class="font-semibold text-text-dark text-lg md:text-xl mb-2 line-clamp-1 group-hover:text-primary transition-colors">
           {{ product.name }}
         </h3>
       </router-link>
 
       <!-- Rating -->
       <div class="flex items-center gap-1 mb-2">
-        <span class="text-yellow-400 text-sm">★</span>
-        <span class="text-sm text-text-muted">{{ displayRating }}</span>
-        <span class="text-xs text-text-light">({{ displayReviews }})</span>
+        <span class="text-yellow-400 text-base">★</span>
+        <span class="text-base text-text-muted">{{ displayRating }}</span>
+        <span class="text-sm text-text-light">({{ displayReviews }})</span>
       </div>
 
       <!-- Price -->
-      <div class="flex items-baseline gap-2 mb-3">
-        <span class="text-xl font-bold text-primary">¥{{ product.price }}</span>
-        <span v-if="product.originalPrice > product.price" class="text-sm text-text-light line-through">
+      <div class="flex items-baseline gap-2 mb-4">
+        <span class="text-2xl md:text-3xl font-bold text-primary">¥{{ product.price }}</span>
+        <span v-if="product.originalPrice > product.price" class="text-base text-text-light line-through">
           ¥{{ product.originalPrice }}
         </span>
       </div>
 
       <!-- Add to Cart Button -->
       <button
-        class="w-full py-2.5 rounded-xl font-medium transition-all duration-300 text-sm"
+        class="w-full py-3 md:py-3.5 rounded-xl font-medium transition-all duration-300 text-base md:text-lg"
         :class="addedToCart
           ? 'bg-success text-white'
           : 'bg-primary/10 text-primary hover:bg-primary hover:text-white'"

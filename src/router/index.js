@@ -61,6 +61,36 @@ const routes = [
     name: 'Login',
     component: () => import('../views/LoginView.vue'),
   },
+  {
+    path: '/wishlist',
+    name: 'Wishlist',
+    component: () => import('../views/WishlistView.vue'),
+  },
+  {
+    path: '/addresses',
+    name: 'Addresses',
+    component: () => import('../views/AddressesView.vue'),
+  },
+  {
+    path: '/history',
+    name: 'History',
+    component: () => import('../views/HistoryView.vue'),
+  },
+  {
+    path: '/notifications',
+    name: 'Notifications',
+    component: () => import('../views/NotificationsView.vue'),
+  },
+  {
+    path: '/coupons',
+    name: 'Coupons',
+    component: () => import('../views/CouponsView.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('../views/NotFoundView.vue'),
+  },
 ]
 
 const router = createRouter({
@@ -70,7 +100,6 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    // 同路由但 query 变化时也滚动到顶部
     return { top: 0, behavior: 'smooth' }
   },
 })

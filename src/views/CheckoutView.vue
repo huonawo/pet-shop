@@ -137,7 +137,7 @@ const paymentMethods = [
 
 <template>
   <div class="min-h-screen">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8">
       <!-- Success State -->
       <div v-if="orderComplete" class="text-center py-20">
         <div class="inline-flex items-center justify-center w-24 h-24 bg-success/20 rounded-full mb-6 animate-pulse-soft">

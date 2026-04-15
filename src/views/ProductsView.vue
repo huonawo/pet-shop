@@ -22,6 +22,15 @@ watch(
   { immediate: true }
 )
 
+// 监听顶部导航栏搜索框的搜索参数
+watch(
+  () => route.query.search,
+  (newSearch) => {
+    searchQuery.value = newSearch || ''
+  },
+  { immediate: true }
+)
+
 const filteredProducts = computed(() => {
   let result = [...products]
 
@@ -63,37 +72,19 @@ const filteredProducts = computed(() => {
 
 <template>
   <div class="min-h-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <!-- Page Header + Search Bar -->
-      <div class="flex items-center justify-between mb-8">
-        <!-- Left: Page Header -->
-        <div>
-          <h1 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-2">
-            🛍️ 全部商品
-          </h1>
-          <p class="text-text-muted">
-            共 {{ filteredProducts.length }} 件商品
-          </p>
-        </div>
-
-        <!-- Right: Search Bar -->
-        <div class="w-80">
-          <div class="flex items-center border-2 border-warm-bg-alt rounded-xl px-3 py-2 focus-within:border-primary transition-colors">
-            <svg class="w-5 h-5 text-text-light shrink-0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="搜索商品名称、描述..."
-              class="flex-1 outline-none bg-transparent"
-            />
-          </div>
-        </div>
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-2">
+          🛍️ 全部商品
+        </h1>
+        <p class="text-text-muted">
+          共 {{ filteredProducts.length }} 件商品
+        </p>
       </div>
 
       <!-- Filters -->
-      <div class="bg-white rounded-2xl p-6 shadow-sm mb-10 max-w-4xl mx-auto">
+      <div class="bg-white rounded-2xl p-6 shadow-sm mb-10">
         <!-- Pet Type Filter -->
         <div class="flex flex-wrap gap-4 mb-5">
           <button
@@ -141,7 +132,7 @@ const filteredProducts = computed(() => {
       </div>
 
       <!-- Products Grid -->
-      <div v-if="filteredProducts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div v-if="filteredProducts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
         <ProductCard
           v-for="product in filteredProducts"
           :key="product.id"
