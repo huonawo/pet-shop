@@ -103,8 +103,8 @@
           我们的宠物顾问团队随时为您服务
         </p>
         <div class="flex flex-wrap justify-center gap-6 text-sm">
-          <span>📞 400-888-PETS</span>
-          <span>📧 hello@petshop.com</span>
+          <span>📞 1433223</span>
+          <span>🌐 <a href="https://pet-shop-54p.pages.dev/" class="underline hover:text-white/80">https://pet-shop-54p.pages.dev/</a></span>
           <span>🕐 周一至周日 9:00-21:00</span>
         </div>
       </section>

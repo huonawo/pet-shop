@@ -42,9 +42,9 @@
         <div>
           <h3 class="text-lg font-semibold mb-4 font-pet">联系我们</h3>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li>📞 400-888-PETS</li>
-            <li>📧 hello@petshop.com</li>
-            <li>📍 上海市浦东新区萌宠路88号</li>
+            <li>📞 1433223</li>
+            <li>🌐 <a href="https://pet-shop-54p.pages.dev/" class="hover:text-primary transition-colors">https://pet-shop-54p.pages.dev/</a></li>
+            <li>📍 广东东软学院（小镇）</li>
             <li>🕐 周一至周日 9:00-21:00</li>
           </ul>
         </div>
