@@ -29,6 +29,7 @@ dist-ssr
 .netlify
 
 # Playwright test artifacts
+.playwright-cli/
 .playwright-mcp/
 
 # Documentation images

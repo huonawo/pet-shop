@@ -117,7 +117,7 @@ const reviewProgress = computed(() => {
 
 <template>
   <div class="min-h-screen">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-8">
       <!-- Page Header -->
       <div class="mb-8">
         <h1 class="text-3xl md:text-4xl font-bold text-text-dark font-pet mb-2">
@@ -127,28 +127,28 @@ const reviewProgress = computed(() => {
       </div>
 
       <!-- Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 lg:gap-8 mb-8">
         <button
           v-for="tab in tabs"
           :key="tab.key"
-          class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all text-center cursor-pointer border-2"
+          class="bg-white rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-all text-center cursor-pointer border-2"
           :class="activeTab === tab.key ? 'border-primary bg-primary/5' : 'border-transparent'"
           @click="activeTab = tab.key"
         >
-          <span class="text-2xl block mb-1">{{ tab.icon }}</span>
-          <div class="text-xl font-bold text-text-dark font-pet">{{ stats[tab.key] }}</div>
-          <div class="text-text-muted text-xs">{{ tab.label }}</div>
+          <span class="text-3xl block mb-2">{{ tab.icon }}</span>
+          <div class="text-2xl font-bold text-text-dark font-pet">{{ stats[tab.key] }}</div>
+          <div class="text-sm text-text-muted mt-1">{{ tab.label }}</div>
         </button>
       </div>
 
       <!-- Empty State -->
-      <div v-if="filteredOrders.length === 0" class="text-center py-20 bg-white rounded-2xl shadow-sm">
+      <div v-if="filteredOrders.length === 0" class="text-center py-24 bg-white rounded-2xl shadow-sm">
         <span class="text-7xl block mb-6">📭</span>
         <h2 class="text-2xl font-bold text-text-dark mb-3">暂无{{ tabs.find(t => t.key === activeTab)?.label }}订单</h2>
         <p class="text-text-muted mb-8">快去挑选您爱宠需要的商品吧！</p>
         <router-link
           to="/products"
-          class="inline-block px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 whitespace-nowrap"
+          class="inline-block px-10 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300 whitespace-nowrap text-lg"
         >
           去逛逛 →
         </router-link>

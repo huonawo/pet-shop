@@ -2,7 +2,9 @@
 import { ref, computed } from 'vue'
 import { useCartStore } from '../stores/cart'
 import { useAuthStore } from '../stores/auth'
+import { useWishlistStore } from '../stores/wishlist'
 import { useProductRatingStore } from '../stores/productRatings'
+import { useToast } from '../composables/useToast'
 
 const props = defineProps({
   product: {
@@ -14,10 +16,12 @@ const props = defineProps({
 const emit = defineEmits(['require-login'])
 const cartStore = useCartStore()
 const authStore = useAuthStore()
+const wishlistStore = useWishlistStore()
 const productRatingStore = useProductRatingStore()
+const toast = useToast()
 const addedToCart = ref(false)
+const heartAnimating = ref(false)
 
-// Get dynamic rating from store, fallback to product default
 const displayRating = computed(() => {
   const stored = productRatingStore.getProductRating(props.product.id)
   return stored.rating || props.product.rating
@@ -27,6 +31,8 @@ const displayReviews = computed(() => {
   const stored = productRatingStore.getProductRating(props.product.id)
   return stored.reviews || props.product.reviews
 })
+
+const isWishlisted = computed(() => wishlistStore.isInWishlist(props.product.id))
 
 function handleAddToCart() {
   if (!authStore.isLoggedIn) {
@@ -39,11 +45,31 @@ function handleAddToCart() {
     addedToCart.value = false
   }, 1500)
 }
+
+function handleToggleWishlist(e) {
+  e.preventDefault()
+  e.stopPropagation()
+  if (!authStore.isLoggedIn) {
+    emit('require-login')
+    return
+  }
+  heartAnimating.value = true
+  setTimeout(() => {
+    heartAnimating.value = false
+  }, 400)
+
+  if (isWishlisted.value) {
+    wishlistStore.removeFromWishlist(props.product.id)
+    toast.info('已取消收藏')
+  } else {
+    wishlistStore.addToWishlist(props.product)
+    toast.success('已添加到收藏')
+  }
+}
 </script>
 
 <template>
   <div class="group bg-card-bg rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1">
-    <!-- Product Image -->
     <router-link :to="`/product/${product.id}`" class="block relative overflow-hidden">
       <div
         class="w-full aspect-square flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
@@ -51,14 +77,12 @@ function handleAddToCart() {
       >
         <span class="text-8xl md:text-9xl xl:text-[12rem] select-none">{{ product.emoji || '🐾' }}</span>
       </div>
-      <!-- Discount Badge -->
       <div
         v-if="product.originalPrice > product.price"
         class="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full"
       >
         -{{ Math.round((1 - product.price / product.originalPrice) * 100) }}%
       </div>
-      <!-- Tags -->
       <div class="absolute top-3 right-3 flex flex-col gap-1">
         <span
           v-for="tag in product.tags.slice(0, 1)"
@@ -70,7 +94,18 @@ function handleAddToCart() {
       </div>
     </router-link>
 
-    <!-- Product Info -->
+    <button
+      class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:scale-110"
+      :class="isWishlisted ? 'text-red-500' : 'text-text-light opacity-0 group-hover:opacity-100 hover:text-red-400'"
+      :aria-label="isWishlisted ? '取消收藏' : '添加收藏'"
+      @click="handleToggleWishlist"
+    >
+      <span
+        class="text-lg transition-transform duration-300"
+        :class="{ 'animate-bounce': heartAnimating }"
+      >{{ isWishlisted ? '❤️' : '🤍' }}</span>
+    </button>
+
     <div class="p-5 xl:p-6">
       <router-link :to="`/product/${product.id}`">
         <h3 class="font-semibold text-text-dark text-lg md:text-xl mb-2 line-clamp-1 group-hover:text-primary transition-colors">
@@ -78,14 +113,12 @@ function handleAddToCart() {
         </h3>
       </router-link>
 
-      <!-- Rating -->
       <div class="flex items-center gap-1 mb-2">
         <span class="text-yellow-400 text-base">★</span>
         <span class="text-base text-text-muted">{{ displayRating }}</span>
         <span class="text-sm text-text-light">({{ displayReviews }})</span>
       </div>
 
-      <!-- Price -->
       <div class="flex items-baseline gap-2 mb-4">
         <span class="text-2xl md:text-3xl font-bold text-primary">¥{{ product.price }}</span>
         <span v-if="product.originalPrice > product.price" class="text-base text-text-light line-through">
@@ -93,7 +126,6 @@ function handleAddToCart() {
         </span>
       </div>
 
-      <!-- Add to Cart Button -->
       <button
         class="w-full py-3 md:py-3.5 rounded-xl font-medium transition-all duration-300 text-base md:text-lg"
         :class="addedToCart

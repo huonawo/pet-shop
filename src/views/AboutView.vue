@@ -58,7 +58,7 @@
       <!-- Team -->
       <section class="bg-white rounded-2xl p-6 md:p-12 shadow-sm mb-8 md:mb-12">
         <h2 class="text-2xl font-bold text-text-dark font-pet mb-8 text-center">👥 我们的团队</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           <div class="text-center">
             <div class="w-20 h-20 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
               👨‍💼
@@ -69,7 +69,7 @@
           </div>
           <div class="text-center">
             <div class="w-20 h-20 bg-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
-              👩‍⚕️
+              👨‍💼
             </div>
             <h3 class="font-semibold text-text-dark">小李</h3>
             <p class="text-text-muted text-sm">首席宠物营养师</p>
@@ -90,6 +90,14 @@
             <h3 class="font-semibold text-text-dark">小方</h3>
             <p class="text-text-muted text-sm">设计主管</p>
             <p class="text-text-light text-xs mt-1">养了一只柯基</p>
+          </div>
+          <div class="text-center">
+            <div class="w-20 h-20 bg-warning/20 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl ring-2 ring-primary/20">
+              👨‍🔬
+            </div>
+            <h3 class="font-semibold text-text-dark">小陈</h3>
+            <p class="text-text-muted text-sm">首席兽医官</p>
+            <p class="text-text-light text-xs mt-1">专注宠物健康 8 年</p>
           </div>
         </div>
       </section>
